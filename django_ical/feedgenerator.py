@@ -68,6 +68,7 @@ ITEM_EVENT_FIELD_MAP = (
     ('rdate',               'rdate'),
     ('exdate',              'exdate'),
     ('status',              'status'),
+    ('html_description',    'x-alt-desc'),
 )
 
 
