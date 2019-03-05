@@ -47,6 +47,7 @@ ICAL_EXTRA_FIELDS = [
     'rdate',            # rdate
     'exdate',           # exdate
     'status',           # CONFIRMED|TENTATIVE|CANCELLED
+    'html_description', # html descriptions
 ]
 
 # For Django <1.7
@@ -78,6 +79,7 @@ class ICalFeed(Feed):
     :item_start_datetime: DTSTART
     :item_end_datetime: DTEND
     :item_transparency: TRANSP
+    :item_html_description: X-ALT-DESC
     """
     feed_type = feedgenerator.DefaultFeed
 
