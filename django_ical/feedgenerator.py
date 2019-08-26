@@ -27,7 +27,7 @@ For definitions of the iCalendar format see:
 http://www.ietf.org/rfc/rfc2445.txt
 """
 
-from icalendar import Calendar, Event
+from icalendar import Calendar, Event, vCalAddress, vText
 
 from django.utils.feedgenerator import SyndicationFeed
 
@@ -67,6 +67,7 @@ ITEM_EVENT_FIELD_MAP = (
     ('exdate',              'exdate'),
     ('status',              'status'),
     ('html_description',    'x-alt-desc'),
+    ('attendee',            'attendee'),
 )
 
 
@@ -105,7 +106,10 @@ class ICal20Feed(SyndicationFeed):
             event = Event()
             for ifield, efield in ITEM_EVENT_FIELD_MAP:
                 val = item.get(ifield)
-                if val is not None:
+                if isinstance(val, list):
+                    for list_item in val:
+                        event.add(efield, list_item)
+                elif val is not None:
                     event.add(efield, val)
             calendar.add_component(event)
 
