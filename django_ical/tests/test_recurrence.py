@@ -1,19 +1,9 @@
-# -*- coding: utf-8 -*-
 """Test calendar rrules."""
 
-# Future
-from __future__ import absolute_import
-from __future__ import unicode_literals
-
-# Standard Library
 import datetime
 
-# Django
 from django.test import TestCase
 
-# 3rd-party
-import pytz
-import recurrence
 from dateutil.rrule import DAILY
 from dateutil.rrule import MO
 from dateutil.rrule import MONTHLY
@@ -23,8 +13,9 @@ from dateutil.rrule import WEEKLY
 from dateutil.rrule import YEARLY
 from dateutil.rrule import rrule
 from icalendar.prop import vRecur
+import pytz
+import recurrence
 
-# Project
 from django_ical import utils
 
 
