@@ -23,6 +23,7 @@ FEED_EXTRA_FIELDS = (
     'method',
     'product_id',
     'timezone',
+    'refresh_interval',
 )
 
 # Extra fields added to items (events) to
