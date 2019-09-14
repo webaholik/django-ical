@@ -45,6 +45,7 @@ FEED_FIELD_MAP = (
     ('description',         'x-wr-caldesc'),
     ('timezone',            'x-wr-timezone'),
     ('ttl',                 'x-published-ttl'), # See format here: http://www.rfc-editor.org/rfc/rfc2445.txt (sec 4.3.6)
+    ('refresh_interval',    'refresh-interval'),
 )
 
 ITEM_EVENT_FIELD_MAP = (
