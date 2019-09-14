@@ -12,6 +12,7 @@ syntax: glob
 build
 temp
 dist
+.idea
 
 syntax: regexp
 .*\#.*\#$ 
