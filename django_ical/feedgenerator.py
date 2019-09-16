@@ -29,7 +29,7 @@ For definitions of the iCalendar format see:
 http://www.ietf.org/rfc/rfc2445.txt
 """
 
-from icalendar import Calendar, Event, vCalAddress, vText
+from icalendar import Calendar, Event, Todo, vCalAddress, vText
 
 from django.utils.feedgenerator import SyndicationFeed
 
@@ -106,7 +106,7 @@ class ICal20Feed(SyndicationFeed):
         Write all events to the calendar
         """
         for item in self.items:
-            event = Event()
+            event = Event() if vText('MEETING') in item['categories'] else Todo()
             for ifield, efield in ITEM_EVENT_FIELD_MAP:
                 val = item.get(ifield)
                 if isinstance(val, list):
