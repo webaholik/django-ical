@@ -44,6 +44,7 @@ ICAL_EXTRA_FIELDS = [
     'status',           # CONFIRMED|TENTATIVE|CANCELLED
     'html_description', # html descriptions
     'attendee',         # list of attendees
+    'class',            # PUBLIC|PRIVATE|CONFIDENTIAL
 ]
 
 
