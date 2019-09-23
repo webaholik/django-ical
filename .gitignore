@@ -1,4 +1,5 @@
 syntax: glob
+.idea
 *.orig
 *.rej
 *~
@@ -8,11 +9,11 @@ syntax: glob
 *.pyc
 *.swp
 *.egg-info
+.eggs
 .tox
 build
 temp
 dist
-.idea
 
 syntax: regexp
-.*\#.*\#$ 
+.*\#.*\#$
